@@ -2,8 +2,8 @@
 #define BLYNK_TEMPLATE_NAME "Water Monitor"       // From Blynk cloud
 #define BLYNK_AUTH_TOKEN    "M2s9dPNUFDmHV0ztBnWAFTmjmv31Vc23"      // From Blynk device
 
-#define WIFI_SSID           "Pad 6"
-#define WIFI_PASS           "12345678"
+#define WIFI_SSID           ""  //input your device name wifi ssid
+#define WIFI_PASS           "" //input your hotspot password
 // >>>>>> END OF CHANGES <<<<<<
 
 #define BLYNK_PRINT Serial  // Debug prints to USB serial
