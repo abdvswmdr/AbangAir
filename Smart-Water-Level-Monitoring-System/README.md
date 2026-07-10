@@ -4,9 +4,6 @@ An embedded water-tank monitoring and control prototype developed using an **STM
 
 The system measures the distance between an HC-SR04 ultrasonic sensor and the water surface, converts the measurement into a calibrated water-level percentage, controls a 12 V pump through a relay module, displays live status on an SSD1306 OLED, produces buzzer alerts, and sends data to the Blynk IoT platform.
 
-> [!CAUTION]
-> The supplied ESP32 sketch is preserved exactly as provided and contains Wi-Fi and Blynk credentials. Read [`SECURITY_NOTICE.md`](docs/SECURITY_NOTICE.md) and replace/revoke those credentials before making this repository public.
-
 ## Project Context
 
 - **Course:** EFB 2073/EEB 2083 – Microprocessors & Computer Architecture
@@ -212,12 +209,6 @@ The documented test container used:
 
 The project notes report approximately ±1 cm ultrasonic consistency after five-sample averaging and a Blynk update delay of roughly 2–3 seconds.
 
-## Important Code-Preservation Note
-
-The two firmware files in this repository are **byte-for-byte copies of the files supplied for this project**. They have not been reformatted, renamed internally, cleaned up, or rewritten.
-
-The source hashes are listed in [`docs/CODE_INTEGRITY.md`](docs/CODE_INTEGRITY.md).
-
 ## Known Implementation Details
 
 - The STM32 code includes manual-override handling even though the development notes state that the feature was not required in the final demonstration.
@@ -245,13 +236,9 @@ Smart-Water-Level-Monitoring-System/
     ├── BLYNK_SETUP.md
     ├── TESTING_AND_CALIBRATION.md
     ├── TROUBLESHOOTING.md
-    ├── SECURITY_NOTICE.md
     ├── FUTURE_IMPROVEMENTS.md
-    ├── CODE_INTEGRITY.md
-    ├── diagrams/
-    │   └── README.md
-    └── hardware_photos/
-        └── README.md
+    ├── diagrams
+    └── hardware_photos
 ```
 
 ## Skills Demonstrated
