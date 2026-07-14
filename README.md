@@ -1,4 +1,18 @@
-# Smart Water Level Monitoring & Automatic Pump Control System
+<!-- logo here -->
+
+# AbangAir
+
+<p align="center">
+  <img alt="STM32" src="https://img.shields.io/badge/STM32-Nucleo--F401RE-03234B?logo=stmicroelectronics&logoColor=white">
+  <img alt="ESP32" src="https://img.shields.io/badge/ESP32-DevKit-E7352C?logo=espressif&logoColor=white">
+  <img alt="HC-SR04" src="https://img.shields.io/badge/Sensor-HC--SR04-orange?logo=arduino&logoColor=white">
+  <img alt="OLED" src="https://img.shields.io/badge/Display-SSD1306_OLED-blueviolet?logo=adafruit&logoColor=white">
+  <img alt="Mbed OS" src="https://img.shields.io/badge/Framework-ARM_Mbed_2-0091BD?logo=arm&logoColor=white">
+  <img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino_IDE-00878F?logo=arduino&logoColor=white">
+  <img alt="Blynk IoT" src="https://img.shields.io/badge/IoT-Blynk-00A4E4?logo=blynk&logoColor=white">
+  <img alt="UART" src="https://img.shields.io/badge/Protocol-UART-FF6F00?logo=serialport&logoColor=white">
+  <img alt="I2C" src="https://img.shields.io/badge/Protocol-I2C-4CAF50?logo=i2c&logoColor=white">
+</p>
 
 An embedded water-tank monitoring and control prototype developed using an **STM32 Nucleo-F401RE** as the real-time controller and an **ESP32 DevKit** as the Wi-Fi/Blynk bridge.
 
