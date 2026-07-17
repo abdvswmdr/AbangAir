@@ -13,7 +13,12 @@ An embedded water-tank monitoring and control prototype developed using an **STM
 The system measures the distance between an HC-SR04 ultrasonic sensor and the water surface, converts the measurement into a calibrated water-level percentage, controls a 12 V pump through a relay module, displays live status on an SSD1306 OLED, produces buzzer alerts, and sends data to the Blynk IoT platform.
 
 <p align="center">
-  <img src="docs/diagrams/Flowchart.png" alt="System Flowchart" width="600px">
+  <img src="docs/diagrams/Flowchart.png" alt="System Flowchart" width="300px">
+</p>
+
+### Full Hardware Setup
+<p align="center">
+  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="300px">
 </p>
 
 ### Full Hardware Setup
