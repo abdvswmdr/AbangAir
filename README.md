@@ -40,29 +40,23 @@ Developed as a comprehensive hardware-software portfolio project for **EFB 2073/
 
 ---
 
-### Hardware Setup
+<details>
+<summary>📸 <b> Demo: Full Hardware Assembly </b></summary>
 
 <!-- 
-Option 1: Bulletproof HTML Table. 
+Bulletproof HTML Table. 
 Standard Markdown parsers often choke on raw HTML <img> tags inside native Markdown tables. 
 Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local IDEs.
 -->
 <p align="center">
-  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</p>
-
----
-<details>
-<summary>📸 <b>Click to view Full Hardware Assembly (Rotated)</b></summary>
-<br>
-
-<p align="center">
   <a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
-    <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="550px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
+    <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="420px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
   </a>
 </p>
 
 </details>
+
+---
 
 <!-- 
 Note on GitHub Behavior:
@@ -70,7 +64,6 @@ Wrapping the <img> in an <a> tag makes it fully clickable.
 When a user clicks it on GitHub, it will naturally open the full-resolution source image 
 in a new browser tab ("pop") for close-up technical inspection.
 -->
-
 <table align="center" width="100%">
   <tr>
     <td align="center" width="33%">
@@ -330,42 +323,6 @@ The project notes report approximately ±1 cm ultrasonic consistency after five-
 - The STM32 source retains a global `DigitalOut esp_tx(PA_9)` declaration and also creates `Serial espUart(PA_9, PA_10)` inside `main()`. This repository leaves that source unchanged.
 - The relay logic assumes that a logic HIGH activates the selected relay module.
 - Common ground is mandatory for UART and relay-control reference levels.
-
-## Repository Structure
-
-```text
-Smart-Water-Level-Monitoring-System/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── stm32_firmware/
-│   └── main.cpp
-├── esp32_firmware/
-│   └── esp32_blynk.ino
-└── docs/
-    ├── PROJECT_DEVELOPMENT_NOTES.md
-    ├── CONNECTIONS.md
-    ├── SOFTWARE_SETUP.md
-    ├── BLYNK_SETUP.md
-    ├── TESTING_AND_CALIBRATION.md
-    ├── TROUBLESHOOTING.md
-    ├── FUTURE_IMPROVEMENTS.md
-    ├── diagrams
-    └── hardware_photos
-```
-
-## Skills Demonstrated
-
-- STM32 and ARM Mbed C/C++
-- ESP32 programming with Arduino IDE
-- Ultrasonic sensing and filtering
-- GPIO, I2C, UART, and Wi-Fi integration
-- Relay and DC-pump control
-- Direct SSD1306 frame-buffer rendering
-- Blynk IoT integration
-- Embedded-system debugging
-- Sensor calibration
-- Hardware/software co-design
 
 ## Future Improvements
 
