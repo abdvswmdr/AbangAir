@@ -14,9 +14,9 @@ The system measures the distance between an HC-SR04 ultrasonic sensor and the wa
 
 ### Full Hardware Setup
 <p align="center">
-  <img src="./6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px">
+  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px">
 </p>
-
+docs/hardware_photos/
 | Local OLED Interface | Submersible Pump | Control Circuitry |
 | :---: | :---: | :---: |
 | <img src="./6248794734553927220_121.jpg" alt="OLED UI Display" width="220px"> | <img src="./6248794734553927232_121.jpg" alt="Submersible Pump" width="220px"> | <img src="./6248794734553927236_121.jpg" alt="STM32 and ESP32" width="220px"> |
