@@ -12,6 +12,7 @@
   <img src="docs/diagrams/Flowchart.png" alt="System Flowchart" width="300px">
 </p>
 
+---
 
 ## 📋 Contents
 
@@ -40,9 +41,6 @@ Developed as a comprehensive hardware-software portfolio project for **EFB 2073/
 ---
 
 ### Hardware Setup
-<p align="center">
-  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="500px" style="transform: rotate(90deg); margin: 100px 0;">
-</p>
 
 <!-- 
 Option 1: Bulletproof HTML Table. 
@@ -133,6 +131,8 @@ graph LR
     style I fill:#313244,stroke:#f38ba8,color:#f38ba8
 ```
 
+</details>
+
 ---
 
 ## Hardware
@@ -151,10 +151,8 @@ graph LR
 See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and electrical cautions.
 
 <details>
-<summary><strong> Pin Assignment </strong></summary>
-<br>
+<summary><strong> Pinout: STM32 Nucleo-F401RE </strong></summary>
 
-#### STM32 Nucleo-F401RE
 | Pin | Function | Notes |
 |:---:|:---|:---|
 | `PA_0` | HC-SR04 Trigger | 3.3V logic output |
@@ -167,7 +165,11 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 | `PA_9` | UART TX | To ESP32 GPIO16 |
 | `PA_10`| UART RX | From ESP32 GPIO17 |
 
-#### ESP32 DevKit
+</details>
+
+<summary><strong> Pinout: ESP32 DevKit </strong></summary>
+
+
 | Pin | Function | Notes |
 |:---:|:---|:---|
 | `GPIO16` | UART2 RX | From STM32 PA_9 |
