@@ -26,11 +26,18 @@
 * [Contributing](#contributing)
 * [License](#license)
 
+---
+
 ## Project Overview
 
 An embedded water-tank monitoring and control prototype developed using an **STM32 Nucleo-F401RE** as the real-time controller and an **ESP32 DevKit** as the Wi-Fi/Blynk bridge. The system measures the distance between an HC-SR04 ultrasonic sensor and the water surface, converts the measurement into a calibrated water-level percentage, controls a 12 V pump through a relay module, displays live status on an SSD1306 OLED, produces buzzer alerts, and sends data to the Blynk IoT platform.
 
 Developed as a comprehensive hardware-software portfolio project for **EFB 2073/EEB 2083 – Microprocessors & Computer Architecture** at **Universiti Teknologi PETRONAS** (January 2026 Semester).
+
+> [!WARNING]
+> **Hardware Caution:** The HC-SR04 operates at 5V. The ECHO pin *must* be connected to the STM32 through a 5V-to-3.3V voltage divider (e.g., 1kΩ + 2kΩ) to prevent damaging the STM32 GPIO pins.
+
+---
 
 ### Hardware Setup
 <p align="center">
@@ -74,6 +81,36 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
 
 ## System Architecture
 
+```mermaid
+graph TD
+    subgraph STM32 ["🧠 STM32 Nucleo-F401RE (Edge Controller)"]
+        A[HC-SR04 Sensor] -->|5-sample avg| B(Level Calculation)
+        B --> C[SSD1306 OLED]
+        B --> D[Relay / Pump Control]
+        B --> E[Piezo Buzzer]
+    end
+
+    subgraph ESP32 ["📡 ESP32 DevKit (IoT Bridge)"]
+        F[UART Parser] --> G[Blynk Cloud API]
+    end
+
+    subgraph Cloud ["☁️ Blynk Cloud / Mobile App"]
+        H[Dashboard & Event Logging]
+    end
+
+    STM32 -- "UART (9600 baud)\nL:level, D:dist, P:state" --> ESP32
+    ESP32 -- "V2 Override Command\n(OVERRIDE:0 / 1)" --> STM32
+    ESP32 <-->|Wi-Fi| Cloud
+    D --> I((⚡ 12V DC Submersible Pump))
+    
+    classDef stm32 fill:#03234B,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef esp32 fill:#E7352C,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef cloud fill:#00A4E4,stroke:#fff,stroke-width:2px,color:#fff;
+    class STM32 stm32;
+    class ESP32 esp32;
+    class Cloud cloud;
+```
+
 ```text
                          UART, 9600 baud
 ┌──────────────────────┐  L:<level>,D:<distance>,P:<state>  ┌───────────────────┐
@@ -109,7 +146,7 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
 See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and electrical cautions.
 
 <details>
-<summary><strong> Click to expand: Pin Assignment </strong></summary>
+<summary><strong> Pin Assignment </strong></summary>
 <br>
 
 #### STM32 Nucleo-F401RE
@@ -183,21 +220,23 @@ The ESP32 firmware:
 6. Marks STM32 data unavailable after a 10-second UART timeout.
 7. Calls the Blynk events `critical_low` and `tank_full` while their conditions are true.
 
-## Implemented Thresholds
 
-| Parameter | Code value |
-|---|---:|
-| Empty-tank distance | 18.5 cm |
-| Full-tank distance | 3.0 cm |
-| Number of samples | 5 |
-| Pump ON threshold | Below 90% |
-| Pump OFF threshold | 90% or above |
-| Critical-low alert | 10% or below |
-| Full alert | 95% or above |
-| UART baud rate | 9600 |
-| Main loop delay | 0.5 s |
-| Blynk update interval | 2 s |
-| STM32 timeout on ESP32 | 10 s |
+<details>
+<summary><strong> Implemented Thresholds </strong></summary>
+
+| Parameter | Code Value |
+| :--- | :--- |
+| **Empty-tank distance** | `18.5 cm` |
+| **Full-tank distance** | `3.0 cm` |
+| **Pump ON threshold** | `< 90%` |
+| **Pump OFF threshold** | `≥ 90%` |
+| **Critical-low alert** | `≤ 10%` (Triggers Buzzer + Blynk Event) |
+| **Full alert** | `≥ 95%` (Triggers Buzzer + Blynk Event) |
+| **UART Baud Rate** | `9600` |
+| **Blynk Update Interval** | `2.0 s` |
+| **STM32 timeout on ESP32** | `10 s` |
+
+---
 
 ## Blynk Configuration
 
@@ -315,4 +354,6 @@ Smart-Water-Level-Monitoring-System/
 
 ## License
 
-Released under the [MIT License](https://www.google.com/search?q=./LICENSE).
+Released under the [MIT License](./LICENSE).
+
+---
