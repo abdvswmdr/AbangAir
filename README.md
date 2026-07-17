@@ -1,15 +1,15 @@
 # AbangAir 💧
 
 <p align="center">
-  <img alt="STM32" src="https://img.shields.io/badge/Nucleo-F401RE-03234B?logo=stmicroelectronics&logoColor=white">
-  <img alt="ESP32" src="https://img.shields.io/badge/ESP32-DevKit-E7352C?logo=espressif&logoColor=white">
-  <img alt="Mbed OS" src="https://img.shields.io/badge/Mbed-2-0091BD?logo=arm&logoColor=white">
-  <img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino-00878F?logo=arduino&logoColor=white">
-  <img alt="Blynk IoT" src="https://img.shields.io/badge/IoT-Blynk-00A4E4?logo=blynk&logoColor=white">
+<img alt="STM32" src="https://img.shields.io/badge/Nucleo-F401RE-03234B?logo=stmicroelectronics&logoColor=white">
+<img alt="ESP32" src="https://img.shields.io/badge/ESP32-DevKit-E7352C?logo=espressif&logoColor=white">
+<img alt="Mbed OS" src="https://img.shields.io/badge/Mbed-2-0091BD?logo=arm&logoColor=white">
+<img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino-00878F?logo=arduino&logoColor=white">
+<img alt="Blynk IoT" src="https://img.shields.io/badge/IoT-Blynk-00A4E4?logo=blynk&logoColor=white">
 </p>
 
 <p align="center">
-  <img src="docs/diagrams/Flowchart.png" alt="System Flowchart" width="300px">
+<img src="docs/diagrams/Flowchart.png" alt="System Flowchart" width="300px">
 </p>
 
 ---
@@ -48,9 +48,9 @@ Standard Markdown parsers often choke on raw HTML <img> tags inside native Markd
 Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local IDEs.
 -->
 <p align="center">
-  <a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
-    <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="420px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
-  </a>
+<a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
+<img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="420px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
+</a>
 </p>
 
 </details>
@@ -64,20 +64,20 @@ When a user clicks it on GitHub, it will naturally open the full-resolution sour
 in a new browser tab ("pop") for close-up technical inspection.
 -->
 <table align="center" width="100%">
-  <tr>
-    <td align="center" width="33%">
-      <b>OLED Interface</b><br>
-      <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
-    </td>
-    <td align="center" width="33%">
-      <b>Submersible Pump</b><br>
-      <img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
-    </td>
-    <td align="center" width="33%">
-      <b>Control Circuitry</b><br>
-      <img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
-    </td>
-  </tr>
+<tr>
+<td align="center" width="33%">
+<b>OLED Interface</b><br>
+<img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
+</td>
+<td align="center" width="33%">
+<b>Submersible Pump</b><br>
+<img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
+</td>
+<td align="center" width="33%">
+<b>Control Circuitry</b><br>
+<img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
+</td>
+</tr>
 </table>
 
 ---
@@ -148,98 +148,88 @@ graph LR
 <br>
 
 <table width="100%" style="border-collapse: collapse; border: none;">
-  <tr>
-    <!-- Left Column: STM32 Pinout Table -->
-    <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
-      <h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE</h4>
-      <table width="100%" style="border-collapse: collapse; font-size: 13px;">
-        <thead>
-          <tr style="background-color: #161b22;">
-            <th style="padding: 8px; border: 1px solid #30363d; text-align: center;">Pin</th>
-            <th style="padding: 8px; border: 1px solid #30363d; text-align: left;">Function</th>
-            <th style="padding: 8px; border: 1px solid #30363d; text-align: left;">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_0</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Trigger</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">3.3V logic output</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_1</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Echo</td>
-            <td style="padding: 8px; border: 1px solid #30363d;"><strong>Requires 5V → 3.3V divider</strong></td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_9</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">OLED SDA</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">I2C1</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_8</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">OLED SCL</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">I2C1</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>D4</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">OLED Reset</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">GPIO</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_6</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">Buzzer Output</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">PWM/Digital</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_6</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">Relay Control</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">Active HIGH</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_9</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">UART TX</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">To ESP32 GPIO16</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_10</code></td>
-            <td style="padding: 8px; border: 1px solid #30363d;">UART RX</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">From ESP32 GPIO17</td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
+<tr>
+<!-- Left Column: STM32 Pinout Table -->
+<td width="50%" style="padding: 10px; vertical-align: top; border: none;">
+<h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE</h4>
+<table width="100%" style="border-collapse: collapse; font-size: 13px;">
+<thead>
+<tr style="background-color: #161b22;">
+<th style="padding: 8px; border: 1px solid #30363d; text-align: center;">Pin</th>
+<th style="padding: 8px; border: 1px solid #30363d; text-align: left;">Function</th>
+<th style="padding: 8px; border: 1px solid #30363d; text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_0</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Trigger</td>
+<td style="padding: 8px; border: 1px solid #30363d;">3.3V logic output</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_1</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Echo</td>
+<td style="padding: 8px; border: 1px solid #30363d;"><strong>Requires 5V → 3.3V divider</strong></td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_9</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">OLED SDA</td>
+<td style="padding: 8px; border: 1px solid #30363d;">I2C1</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_8</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">OLED SCL</td>
+<td style="padding: 8px; border: 1px solid #30363d;">I2C1</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>D4</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">OLED Reset</td>
+<td style="padding: 8px; border: 1px solid #30363d;">GPIO</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_6</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">Buzzer Output</td>
+<td style="padding: 8px; border: 1px solid #30363d;">PWM/Digital</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_6</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">Relay Control</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Active HIGH</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_9</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">UART TX</td>
+<td style="padding: 8px; border: 1px solid #30363d;">To ESP32 GPIO16</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_10</code></td>
+<td style="padding: 8px; border: 1px solid #30363d;">UART RX</td>
+<td style="padding: 8px; border: 1px solid #30363d;">From ESP32 GPIO17</td>
+</tr>
+</tbody>
+</table>
+</td>
 
 <!-- Right Column: Circuit Schematic Card -->
 <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
-  <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); text-align: center; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
-    <strong style="color: #58a6ff; font-size: 14px; display: block; margin-bottom: 12px;">⚡ Hardware Interfacing Schematic</strong>
-    <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
-      <img src="docs/diagrams/Circuit_Diagram.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer; max-height: 320px; object-fit: contain; background: #161b22;">
-    </a>
-    <p style="color: #8b949e; font-size: 11px; margin: 12px 0 0 0; line-height: 1.4; text-align: left;">
-      Wiring schematic showcasing common ground architecture, dual power rails (12V High-Power Loop & stepped-down 5V Logic Bus), safety level divider, and serial cross-wiring.
-    </p>
-    <p style="color: #58a6ff; font-size: 11px; margin: 8px 0 0 0; text-align: center;">
-      <i>💡 Click diagram to open zoom-friendly view.</i>
-    </p>
-  </div>
+<img src="docs/diagrams/Circuit_Diagram.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer; max-height: 320px; object-fit: contain; background: #161b22;">
 </td>
-    
+</tr>
+</table>
 
 ---
 
 <table align="center" width="100%">
-  <tr>
-    <td bgcolor="#0d1117" style="padding: 16px; border: 1px solid #30363d; border-radius: 12px;">
-      <h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"> Circuit Schematic & Power Distribution</h3>
-      <p align="center">
-        <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
-          <img src="docs/diagrams/Circuit_Diagram.jpg" alt="View" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
-        </a>
-      </p>
-    </td>
-  </tr>
+<tr>
+<td bgcolor="#0d1117" style="padding: 16px; border: 1px solid #30363d; border-radius: 12px;">
+<h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"> Circuit Schematic & Power Distribution</h3>
+<p align="center">
+<a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
+<img src="docs/diagrams/Circuit_Diagram.jpg" alt="View" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+</a>
+</p>
+</td>
+</tr>
 </table>
 
 <details>
@@ -331,7 +321,7 @@ L:<level>,D:<distance>,P:<pump_state>
    #define WIFI_SSID           "YOUR_WIFI_SSID"
    #define WIFI_PASS           "YOUR_WIFI_PASSWORD"
    ```
-4. Compile and upload directly to your ESP32 board.
+   4. Compile and upload directly to your ESP32 board.
 
 > [!TIP]
 > Open the Serial Monitor at **115200 baud** to verify the ESP32 is successfully parsing UART data and connecting to Blynk.
