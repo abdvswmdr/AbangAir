@@ -52,6 +52,9 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
 </p>
 
 ---
+<details>
+<summary>📸 <b>Click to view Full Hardware Assembly (Rotated)</b></summary>
+<br>
 
 <p align="center">
   <a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
@@ -59,11 +62,7 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   </a>
 </p>
 
-<p align="center">
-  <a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
-    <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="550px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
-  </a>
-</p>
+</details>
 
 <!-- 
 Note on GitHub Behavior:
