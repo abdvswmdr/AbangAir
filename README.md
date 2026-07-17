@@ -1,10 +1,10 @@
 # AbangAir 💧
 
 <p align="center">
-  <img alt="STM32" src="https://img.shields.io/badge/Nucleo--F401RE-03234B?logo=stmicroelectronics&logoColor=white">
+  <img alt="STM32" src="https://img.shields.io/badge/Nucleo-F401RE-03234B?logo=stmicroelectronics&logoColor=white">
   <img alt="ESP32" src="https://img.shields.io/badge/ESP32-DevKit-E7352C?logo=espressif&logoColor=white">
-  <img alt="Mbed OS" src="https://img.shields.io/badge/Framework-ARM_Mbed_2-0091BD?logo=arm&logoColor=white">
-  <img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino_IDE-00878F?logo=arduino&logoColor=white">
+  <img alt="Mbed OS" src="https://img.shields.io/badge/ARM-Mbed_2-0091BD?logo=arm&logoColor=white">
+  <img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino-00878F?logo=arduino&logoColor=white">
   <img alt="Blynk IoT" src="https://img.shields.io/badge/IoT-Blynk-00A4E4?logo=blynk&logoColor=white">
 </p>
 
