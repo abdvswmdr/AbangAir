@@ -51,6 +51,21 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
+---
+
+<p align="center">
+  <a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
+    <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="550px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
+  </a>
+</p>
+
+<!-- 
+Note on GitHub Behavior:
+Wrapping the <img> in an <a> tag makes it fully clickable. 
+When a user clicks it on GitHub, it will naturally open the full-resolution source image 
+in a new browser tab ("pop") for close-up technical inspection.
+-->
+
 <table align="center" width="100%">
   <tr>
     <td align="center" width="33%">
@@ -167,6 +182,7 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 
 </details>
 
+<details>
 <summary><strong> Pinout: ESP32 DevKit </strong></summary>
 
 
