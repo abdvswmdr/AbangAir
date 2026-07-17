@@ -145,13 +145,14 @@ graph LR
 
 </details>
 
-<br>
+<details>
+<summary><strong> Pinout: STM32 Nucleo-F401RE </strong></summary>
 
 <table width="100%" style="border-collapse: collapse; border: none;">
 <tr>
 <!-- Left Column: STM32 Pinout Table -->
 <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
-<h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE</h4>
+<!-- <h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE</h4> -->
 <table width="100%" style="border-collapse: collapse; font-size: 13px;">
 <thead>
 <tr style="background-color: #161b22;">
@@ -219,18 +220,7 @@ graph LR
 
 ---
 
-<table align="center" width="100%">
-<tr>
-<td bgcolor="#0d1117" style="padding: 16px; border: 1px solid #30363d; border-radius: 12px;">
-<h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"> Circuit Schematic & Power Distribution</h3>
-<p align="center">
-<a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
-<img src="docs/diagrams/Circuit_Diagram.jpg" alt="View" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
-</a>
-</p>
-</td>
-</tr>
-</table>
+</details>
 
 <details>
 <summary><strong> Bill of Materials (BOM) </strong></summary>
