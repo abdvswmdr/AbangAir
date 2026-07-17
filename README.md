@@ -8,22 +8,33 @@
   <img alt="Blynk IoT" src="https://img.shields.io/badge/IoT-Blynk-00A4E4?logo=blynk&logoColor=white">
 </p>
 
-An embedded water-tank monitoring and control prototype developed using an **STM32 Nucleo-F401RE** as the real-time controller and an **ESP32 DevKit** as the Wi-Fi/Blynk bridge.
-
-The system measures the distance between an HC-SR04 ultrasonic sensor and the water surface, converts the measurement into a calibrated water-level percentage, controls a 12 V pump through a relay module, displays live status on an SSD1306 OLED, produces buzzer alerts, and sends data to the Blynk IoT platform.
-
 <p align="center">
   <img src="docs/diagrams/Flowchart.png" alt="System Flowchart" width="300px">
 </p>
 
-### Full Hardware Setup
-<p align="center">
-  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="300px">
-</p>
 
-### Full Hardware Setup
+## 📋 Contents
+
+* [Project Overview](#project-overview)
+* [System Architecture](#system-architecture)
+* [Features](#features)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Technical Details](#technical-details)
+* [Results](#results)
+* [Resources](#resources)
+* [Contributing](#contributing)
+* [License](#license)
+
+## Project Overview
+
+An embedded water-tank monitoring and control prototype developed using an **STM32 Nucleo-F401RE** as the real-time controller and an **ESP32 DevKit** as the Wi-Fi/Blynk bridge. The system measures the distance between an HC-SR04 ultrasonic sensor and the water surface, converts the measurement into a calibrated water-level percentage, controls a 12 V pump through a relay module, displays live status on an SSD1306 OLED, produces buzzer alerts, and sends data to the Blynk IoT platform.
+
+Developed as a comprehensive hardware-software portfolio project for **EFB 2073/EEB 2083 – Microprocessors & Computer Architecture** at **Universiti Teknologi PETRONAS** (January 2026 Semester).
+
+### Hardware Setup
 <p align="center">
-  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px" style="transform: rotate(90deg); margin: 100px 0;">
+  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="500px" style="transform: rotate(90deg); margin: 100px 0;">
 </p>
 
 <!-- 
@@ -48,31 +59,7 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   </tr>
 </table>
 
-## 📋 Contents
-
-* [Project Overview](#project-overview)
-* [System Architecture](#system-architecture)
-* [Features](#features)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Technical Details](#technical-details)
-* [Results](#results)
-* [Resources](#resources)
-* [Contributing](#contributing)
-* [License](#license)
-
-## Project Context
-
-- **Course:** EFB 2073/EEB 2083 – Microprocessors & Computer Architecture
-- **Institution:** Universiti Teknologi PETRONAS
-- **Semester:** January 2026
-- **Main platform:** STM32 Nucleo-F401RE
-- **STM32 framework:** ARM Mbed, classic Mbed 2 style
-- **STM32 development environment:** Keil Studio Cloud
-- **ESP32 development environment:** Arduino IDE
-- **IoT platform:** Blynk IoT
-
-## Main Functions
+## Features
 
 - Five-sample ultrasonic distance averaging
 - Calibrated water-level calculation
@@ -127,7 +114,7 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 
 | Pin | Function |
 |---|---|
-| PA_0 | HC-SR04 trigger |
+| `PA_0` | HC-SR04 trigger |
 | PA_1 | HC-SR04 echo through a 5 V-to-3.3 V divider |
 | PB_9 | OLED SDA |
 | PB_8 | OLED SCL |
@@ -326,4 +313,4 @@ Smart-Water-Level-Monitoring-System/
 
 ## License
 
-Released under the MIT License.
+Released under the [MIT License](https://www.google.com/search?q=./LICENSE).
