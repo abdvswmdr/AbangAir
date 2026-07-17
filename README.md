@@ -112,27 +112,27 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 <summary><strong> Click to expand: Pin Assignment </strong></summary>
 <br>
 
-### STM32 Nucleo-F401RE
+#### STM32 Nucleo-F401RE
+| Pin | Function | Notes |
+|:---:|:---|:---|
+| `PA_0` | HC-SR04 Trigger | 3.3V logic output |
+| `PA_1` | HC-SR04 Echo | **Requires 5V→3.3V voltage divider** |
+| `PB_9` | OLED SDA | I2C1 |
+| `PB_8` | OLED SCL | I2C1 |
+| `D4` | OLED Reset | GPIO |
+| `PA_6` | Buzzer Output | PWM/Digital |
+| `PB_6` | Relay Control | Active HIGH |
+| `PA_9` | UART TX | To ESP32 GPIO16 |
+| `PA_10`| UART RX | From ESP32 GPIO17 |
 
-| Pin | Function |
-|---|---|
-| `PA_0` | HC-SR04 trigger |
-| PA_1 | HC-SR04 echo through a 5 V-to-3.3 V divider |
-| PB_9 | OLED SDA |
-| PB_8 | OLED SCL |
-| D4 | OLED reset |
-| PA_6 | Buzzer output |
-| PB_6 | Relay control |
-| PA_9 | UART transmit to ESP32 GPIO16 |
-| PA_10 | UART receive from ESP32 GPIO17 |
+#### ESP32 DevKit
+| Pin | Function | Notes |
+|:---:|:---|:---|
+| `GPIO16` | UART2 RX | From STM32 PA_9 |
+| `GPIO17` | UART2 TX | To STM32 PA_10 |
+| `GND` | Signal Ground | **Must be shared with STM32** |
 
-### ESP32
-
-| Pin | Function |
-|---|---|
-| GPIO16 | UART2 RX from STM32 PA_9 |
-| GPIO17 | UART2 TX to STM32 PA_10 |
-| GND | Shared signal ground |
+</details>
 
 ## Firmware Files
 
