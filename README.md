@@ -145,6 +145,67 @@ graph LR
 
 </details>
 
+<details open>
+    <summary><strong>Pinout: STM32 Nucleo-F401RE</strong></summary>
+    <br>
+    <table width="100%" style="border-collapse: collapse; font-size: 13px;">
+      <thead>
+        <tr style="background-color: #161b22;">
+          <th style="padding: 6px; border: 1px solid #30363d;" align="center">Pin</th>
+          <th style="padding: 6px; border: 1px solid #30363d;" align="left">Function</th>
+          <th style="padding: 6px; border: 1px solid #30363d;" align="left">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PA_0</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">HC-SR04 Trigger</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">3.3V logic output</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PA_1</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">HC-SR04 Echo</td>
+          <td style="padding: 6px; border: 1px solid #30363d;"><strong>Requires 5V → 3.3V divider</strong></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PB_9</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">OLED SDA</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">I2C1</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PB_8</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">OLED SCL</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">I2C1</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>D4</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">OLED Reset</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">GPIO</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PA_6</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">Buzzer Output</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">PWM/Digital</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PB_6</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">Relay Control</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">Active HIGH</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PA_9</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">UART TX</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">To ESP32 GPIO16</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; border: 1px solid #30363d;" align="center"><code>PA_10</code></td>
+          <td style="padding: 6px; border: 1px solid #30363d;">UART RX</td>
+          <td style="padding: 6px; border: 1px solid #30363d;">From ESP32 GPIO17</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+  
 ---
 
 <table align="center" width="100%">
