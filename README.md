@@ -145,78 +145,78 @@ graph LR
 
 </details>
 
-<table align="center" width="100%" style="border-collapse: collapse; border: none;">
-  <tr style="border: none;">
+<table width="100%" style="border-collapse: collapse; border: none;">
+  <tr>
     <!-- Left Column: STM32 Pinout Table -->
-    <td width="50%" valign="top" style="padding: 10px; border: none;">
-      <h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE[cite: 1]</h4>
+    <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
+      <h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE</h4>
       <table width="100%" style="border-collapse: collapse; font-size: 13px;">
         <thead>
           <tr style="background-color: #161b22;">
-            <th style="padding: 8px; border: 1px solid #30363d;" align="center">Pin[cite: 1]</th>
-            <th style="padding: 8px; border: 1px solid #30363d;" align="left">Function[cite: 1]</th>
-            <th style="padding: 8px; border: 1px solid #30363d;" align="left">Notes[cite: 1]</th>
+            <th style="padding: 8px; border: 1px solid #30363d; text-align: center;">Pin</th>
+            <th style="padding: 8px; border: 1px solid #30363d; text-align: left;">Function</th>
+            <th style="padding: 8px; border: 1px solid #30363d; text-align: left;">Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PA_0</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Trigger[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">3.3V logic output[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_0</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Trigger</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">3.3V logic output</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PA_1</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Echo[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;"><strong>Requires 5V → 3.3V divider</strong>[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_1</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">HC-SR04 Echo</td>
+            <td style="padding: 8px; border: 1px solid #30363d;"><strong>Requires 5V → 3.3V divider</strong></td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PB_9</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">OLED SDA[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">I2C1[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_9</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">OLED SDA</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">I2C1</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PB_8</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">OLED SCL[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">I2C1[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_8</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">OLED SCL</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">I2C1</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>D4</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">OLED Reset[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">GPIO[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>D4</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">OLED Reset</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">GPIO</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PA_6</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">Buzzer Output[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">PWM/Digital[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_6</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">Buzzer Output</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">PWM/Digital</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PB_6</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">Relay Control[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">Active HIGH[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PB_6</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">Relay Control</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">Active HIGH</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PA_9</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">UART TX[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">To ESP32 GPIO16[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_9</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">UART TX</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">To ESP32 GPIO16</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #30363d;" align="center"><code>PA_10</code>[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">UART RX[cite: 1]</td>
-            <td style="padding: 8px; border: 1px solid #30363d;">From ESP32 GPIO17[cite: 1]</td>
+            <td style="padding: 8px; border: 1px solid #30363d; text-align: center;"><code>PA_10</code></td>
+            <td style="padding: 8px; border: 1px solid #30363d;">UART RX</td>
+            <td style="padding: 8px; border: 1px solid #30363d;">From ESP32 GPIO17</td>
           </tr>
         </tbody>
       </table>
     </td>
     
     <!-- Right Column: Circuit Schematic Card -->
-    <td width="50%" valign="top" style="padding: 10px; border: none;">
+    <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
       <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); text-align: center;">
-        <strong style="color: #58a6ff; font-size: 14px; display: block; margin-bottom: 12px;">⚡ Hardware Interfacing Schematic[cite: 1]</strong>
+        <strong style="color: #58a6ff; font-size: 14px; display: block; margin-bottom: 12px;">⚡ Hardware Interfacing Schematic</strong>
         <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
           <img src="docs/diagrams/Circuit_Diagram.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer;">
         </a>
         <p style="color: #8b949e; font-size: 11px; margin: 12px 0 0 0; line-height: 1.4; text-align: left;">
-          Wiring schematic showcasing common ground architecture, dual power rails (12V High-Power Loop & stepped-down 5V Logic Bus), safety level divider, and serial cross-wiring.[cite: 1]
+          Wiring schematic showcasing common ground architecture, dual power rails (12V High-Power Loop & stepped-down 5V Logic Bus), safety level divider, and serial cross-wiring.
         </p>
         <p style="color: #58a6ff; font-size: 11px; margin: 8px 0 0 0; text-align: center;">
           <i>💡 Click diagram to open zoom-friendly view.</i>
@@ -225,6 +225,7 @@ graph LR
     </td>
   </tr>
 </table>
+
 ---
 
 <table align="center" width="100%">
