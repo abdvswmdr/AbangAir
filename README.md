@@ -149,7 +149,7 @@ graph LR
 <summary><strong> Pinout: STM32 Nucleo-F401RE </strong></summary>
 
 <table width="100%" style="border-collapse: collapse; border: none;">
-<tr>
+<!-- <tr> -->
 <!-- Left Column: STM32 Pinout Table -->
 <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
 <!-- <h4 style="margin-top: 0; color: #58a6ff;">📌 Pinout: STM32 Nucleo-F401RE</h4> -->
