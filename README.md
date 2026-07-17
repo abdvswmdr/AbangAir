@@ -153,7 +153,7 @@ graph LR
       <h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"> Circuit Schematic & Power Distribution</h3>
       <p align="center">
         <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
-          <img src="docs/schematics/Circuit_Diagram.jpg" alt="View" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+          <img src="docs/diagrams/Circuit_Diagram.jpg" alt="View" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
         </a>
       </p>
     </td>
