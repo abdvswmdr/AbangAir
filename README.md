@@ -204,6 +204,23 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 
 </details>
 
+<details>
+<summary><strong> Implemented Thresholds </strong></summary>
+
+| Parameter | Code Value |
+| :--- | :--- |
+| **Empty-tank distance** | `18.5 cm` |
+| **Full-tank distance** | `3.0 cm` |
+| **Pump ON threshold** | `< 90%` |
+| **Pump OFF threshold** | `≥ 90%` |
+| **Critical-low alert** | `≤ 10%` (Triggers Buzzer + Blynk Event) |
+| **Full alert** | `≥ 95%` (Triggers Buzzer + Blynk Event) |
+| **UART Baud Rate** | `9600` |
+| **Blynk Update Interval** | `2.0 s` |
+| **STM32 timeout on ESP32** | `10 s` |
+
+---
+
 ## Installation
 
 ### 1. STM32 Edge Firmware (Keil Studio Cloud)
@@ -211,23 +228,6 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 2. Initialize an empty project utilizing the classic **ARM Mbed 2** core template (`mbed.h`).
 3. Import the source code from [`stm32_firmware/main.cpp`](./stm32_firmware/main.cpp).
 4. Set the target build system to `NUCLEO-F401RE`, compile, and flash the device.
-
-The STM32 firmware:
-
-1. Takes five ultrasonic measurements.
-2. Discards readings outside the accepted range.
-3. Averages valid samples.
-4. Maps distance to water level using:
-   - Empty distance: 18.5 cm
-   - Full distance: 3.0 cm
-5. Activates the pump below 90%.
-6. switches the pump off at or above 90%.
-7. Forces the relay off when the sensor result is invalid.
-8. Produces one 2-second buzzer activation per threshold crossing at:
-   - 95% or higher
-   - 10% or lower
-9. Updates the OLED.
-10. Sends a UART record every loop:
 
 ```text
 L:<level>,D:<distance>,P:<pump_state>
@@ -248,23 +248,6 @@ L:<level>,D:<distance>,P:<pump_state>
 
 > [!TIP]
 > Open the Serial Monitor at **115200 baud** to verify the ESP32 is successfully parsing UART data and connecting to Blynk.
-
----
-
-<details>
-<summary><strong> Implemented Thresholds </strong></summary>
-
-| Parameter | Code Value |
-| :--- | :--- |
-| **Empty-tank distance** | `18.5 cm` |
-| **Full-tank distance** | `3.0 cm` |
-| **Pump ON threshold** | `< 90%` |
-| **Pump OFF threshold** | `≥ 90%` |
-| **Critical-low alert** | `≤ 10%` (Triggers Buzzer + Blynk Event) |
-| **Full alert** | `≥ 95%` (Triggers Buzzer + Blynk Event) |
-| **UART Baud Rate** | `9600` |
-| **Blynk Update Interval** | `2.0 s` |
-| **STM32 timeout on ESP32** | `10 s` |
 
 ---
 
