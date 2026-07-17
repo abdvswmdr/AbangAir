@@ -85,9 +85,12 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
 - Blynk event logging for low-water and full-tank conditions
 - A V2 command that can force the pump relay ON through the implemented override logic
 
+---
+
 ## System Architecture
 
-
+<details open>
+<summary><strong>🗺️ System Architecture Diagram</strong></summary>
 
 ```mermaid
 graph LR
@@ -103,7 +106,7 @@ graph LR
     end
 
     subgraph Cloud ["☁️ Blynk Cloud / Mobile App"]
-        H["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/dashboard.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/dashboard.svg)' width='20' height='20' /> App Dashboard"]
+        H["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/dashboard.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/dashboard.svg)' width='20' height='20' /> App Dashboard & Event Logging"]
     end
 
     STM32 -- "UART (9600)<br/>L:level, D:dist, P:state" --> ESP32
@@ -130,35 +133,7 @@ graph LR
     style I fill:#313244,stroke:#f38ba8,color:#f38ba8
 ```
 
-```mermaid
-graph TD
-    subgraph STM32 ["🧠 STM32 Nucleo-F401RE (Edge Controller)"]
-        A[HC-SR04 Sensor] -->|5-sample avg| B(Level Calculation)
-        B --> C[SSD1306 OLED]
-        B --> D[Relay / Pump Control]
-        B --> E[Piezo Buzzer]
-    end
-
-    subgraph ESP32 ["📡 ESP32 DevKit (IoT Bridge)"]
-        F[UART Parser] --> G[Blynk Cloud API]
-    end
-
-    subgraph Cloud ["☁️ Blynk Cloud / Mobile App"]
-        H[Dashboard & Event Logging]
-    end
-
-    STM32 -- "UART (9600 baud)\nL:level, D:dist, P:state" --> ESP32
-    ESP32 -- "V2 Override Command\n(OVERRIDE:0 / 1)" --> STM32
-    ESP32 <-->|Wi-Fi| Cloud
-    D --> I((⚡ 12V DC Submersible Pump))
-    
-    classDef stm32 fill:#03234B,stroke:#fff,stroke-width:2px,color:#fff;
-    classDef esp32 fill:#E7352C,stroke:#fff,stroke-width:2px,color:#fff;
-    classDef cloud fill:#00A4E4,stroke:#fff,stroke-width:2px,color:#fff;
-    class STM32 stm32;
-    class ESP32 esp32;
-    class Cloud cloud;
-```
+---
 
 ## Hardware
 
