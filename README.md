@@ -66,6 +66,29 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   </tr>
 </table>
 
+
+<p align="center">
+  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <b>Local OLED Interface</b><br>
+      <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
+    </td>
+    <td align="center" width="33%">
+      <b>Submersible Pump</b><br>
+      <img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
+    </td>
+    <td align="center" width="33%">
+      <b>Control Circuitry</b><br>
+      <img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
+    </td>
+  </tr>
+</table>
+
+
 ## Features
 
 - Five-sample ultrasonic distance averaging
