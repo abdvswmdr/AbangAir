@@ -219,6 +219,8 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 | **Blynk Update Interval** | `2.0 s` |
 | **STM32 timeout on ESP32** | `10 s` |
 
+</details>
+
 ---
 
 ## Installation
