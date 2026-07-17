@@ -277,25 +277,7 @@ tank_full
 
 Detailed setup is available in [`docs/BLYNK_SETUP.md`](docs/BLYNK_SETUP.md).
 
-## Software Setup
-
-### STM32
-
-The supplied `main.cpp` was written for classic ARM Mbed syntax and was developed using Keil Studio Cloud for the NUCLEO-F401RE. Add it to a compatible Mbed project that provides `mbed.h`, select the NUCLEO-F401RE target, build, and flash the board.
-
-### ESP32
-
-1. Install ESP32 board support in Arduino IDE.
-2. Install the Blynk library.
-3. Open `esp32_firmware/esp32_blynk.ino`.
-4. Replace the embedded credentials before use.
-5. Select the correct ESP32 board and COM port.
-6. Upload the sketch.
-7. Open Serial Monitor at 115200 baud.
-
-More detail is provided in [`docs/SOFTWARE_SETUP.md`](docs/SOFTWARE_SETUP.md).
-
-## Testing Summary
+## Testing 
 
 The documented test container used:
 
