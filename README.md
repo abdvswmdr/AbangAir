@@ -108,7 +108,9 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
 
 See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and electrical cautions.
 
-## Pin Assignments
+<details>
+<summary><strong> Click to expand: Pin Assignment </strong></summary>
+<br>
 
 ### STM32 Nucleo-F401RE
 
