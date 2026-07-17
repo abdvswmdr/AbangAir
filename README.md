@@ -59,6 +59,12 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   </a>
 </p>
 
+<p align="center">
+  <a href="docs/hardware_photos/6235768536831824310_121.jpg" target="_blank">
+    <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="550px" style="transform: rotate(90deg); margin: 90px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); cursor: pointer;">
+  </a>
+</p>
+
 <!-- 
 Note on GitHub Behavior:
 Wrapping the <img> in an <a> tag makes it fully clickable. 
