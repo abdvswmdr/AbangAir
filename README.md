@@ -17,11 +17,10 @@
 ## 📋 Contents
 
 * [Project Overview](#project-overview)
-* [System Architecture](#system-architecture)
 * [Features](#features)
+* [Technical Details](#technical-details) 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Technical Details](#technical-details)
 * [Results](#results)
 * [Resources](#resources)
 * [Contributing](#contributing)
@@ -41,7 +40,7 @@ Developed as a comprehensive hardware-software portfolio project for **EFB 2073/
 ---
 
 <details>
-<summary>📸 <b> Demo: Full Hardware Assembly </b></summary>
+<summary>📸: <b> Full Hardware Assembly </b></summary>
 
 <!-- 
 Bulletproof HTML Table. 
@@ -67,7 +66,7 @@ in a new browser tab ("pop") for close-up technical inspection.
 <table align="center" width="100%">
   <tr>
     <td align="center" width="33%">
-      <b>Local OLED Interface</b><br>
+      <b>OLED Interface</b><br>
       <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="100%" style="border-radius:6px; border: 1px solid #e1e4e8;">
     </td>
     <td align="center" width="33%">
@@ -98,7 +97,7 @@ in a new browser tab ("pop") for close-up technical inspection.
 
 ---
 
-## System Architecture
+## Technical Details 
 
 <details open>
 <summary><strong>🗺️ System Architecture Diagram</strong></summary>
@@ -148,7 +147,26 @@ graph LR
 
 ---
 
-## Hardware
+<table align="center" width="100%">
+  <tr>
+    <td bgcolor="#0d1117" style="padding: 24px; border: 1px solid #30363d; border-radius: 12px;">
+      <h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">⚡ Reference Circuit & Power Distribution</h3>
+      <p align="center" style="color: #8b949e; font-size: 14px; margin-bottom: 20px;">
+        Interactive wiring mapping for the STM32 Nucleo-F401RE edge controller and ESP32/NodeMCU IoT bridging node.
+      </p>
+      <p align="center">
+        <a href="docs/schematics/circuit_diagram.jpg" target="_blank">
+          <img src="docs/schematics/circuit_diagram.jpg" alt="AbangAir Circuit Diagram" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+        </a>
+      </p>
+      <p align="center" style="color: #8b949e; font-size: 12px; margin-bottom: 0;">
+        <i>💡 Click diagram to open high-resolution reference sheet.</i>
+      </p>
+    </td>
+  </tr>
+</table>
+
+## Bill of Materials (BOM)
 
 | Component | Model |
 |---|---|
@@ -192,13 +210,13 @@ See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and e
 
 </details>
 
-## Firmware Files
+## Installation
 
-### STM32 firmware
-
-```text
-stm32_firmware/main.cpp
-```
+### 1. STM32 Edge Firmware (Keil Studio Cloud)
+1. Open your workspace on [Keil Studio Cloud](https://studio.keil.arm.com).
+2. Initialize an empty project utilizing the classic **ARM Mbed 2** core template (`mbed.h`).
+3. Import the source code from [`stm32_firmware/main.cpp`](./stm32_firmware/main.cpp).
+4. Set the target build system to `NUCLEO-F401RE`, compile, and flash the device.
 
 The STM32 firmware:
 
@@ -221,26 +239,23 @@ The STM32 firmware:
 L:<level>,D:<distance>,P:<pump_state>
 ```
 
-### ESP32 firmware
+### 2. ESP32 IoT Firmware (Arduino IDE)
+1. Launch **Arduino IDE** and ensure the ESP32 board support package and **Blynk library** are installed.
+2. Open [`esp32_firmware/esp32_blynk.ino`](./esp32_firmware/esp32_blynk.ino).
+3. Populate your specific network credentials and authentication tokens:
+   ```cpp
+   #define BLYNK_TEMPLATE_ID   "YOUR_TEMPLATE_ID"
+   #define BLYNK_TEMPLATE_NAME "YOUR_TEMPLATE_NAME"
+   #define BLYNK_AUTH_TOKEN    "YOUR_AUTH_TOKEN"
+   #define WIFI_SSID           "YOUR_WIFI_SSID"
+   #define WIFI_PASS           "YOUR_WIFI_PASSWORD"
+   ```
+4. Compile and upload directly to your ESP32 board.
 
-```text
-esp32_firmware/esp32_blynk.ino
-```
+> [!TIP]
+> Open the Serial Monitor at **115200 baud** to verify the ESP32 is successfully parsing UART data and connecting to Blynk.
 
-The ESP32 firmware:
-
-1. Receives UART records using `HardwareSerial` UART2.
-2. Parses level, distance, and pump state.
-3. Sends the latest data to Blynk every two seconds.
-4. Writes:
-   - V0: water level
-   - V1: pump status
-   - V3: distance
-   - V4: Wi-Fi RSSI
-5. Receives a V2 switch value and sends `OVERRIDE:0` or `OVERRIDE:1` to the STM32.
-6. Marks STM32 data unavailable after a 10-second UART timeout.
-7. Calls the Blynk events `critical_low` and `tank_full` while their conditions are true.
-
+---
 
 <details>
 <summary><strong> Implemented Thresholds </strong></summary>
