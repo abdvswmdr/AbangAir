@@ -20,7 +20,34 @@ The system measures the distance between an HC-SR04 ultrasonic sensor and the wa
 <p align="center">
   <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px">
 </p>
-docs/hardware_photos/
+### Full Hardware Setup
+<p align="center">
+  <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px" style="border-radius:10px;">
+</p>
+
+<!-- 
+Option 1: Bulletproof HTML Table. 
+Standard Markdown parsers often choke on raw HTML <img> tags inside native Markdown tables. 
+Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local IDEs.
+-->
+<table width="100%">
+  <tr>
+    <td align="center" valign="top" width="33%">
+      <b>Local OLED Interface</b><br><br>
+      <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="100%" style="border-radius:6px;">
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Submersible Pump</b><br><br>
+      <img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="100%" style="border-radius:6px;">
+    </td>
+    <td align="center" valign="top" width="33%">
+      <b>Control Circuitry</b><br><br>
+      <img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="100%" style="border-radius:6px;">
+    </td>
+  </tr>
+</table>
+
+---
 | Local OLED Interface | Submersible Pump | Control Circuitry |
 | :---: | :---: | :---: |
 | <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="220px"> | <img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="220px"> | <img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="220px"> |
