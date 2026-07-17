@@ -149,18 +149,12 @@ graph LR
 
 <table align="center" width="100%">
   <tr>
-    <td bgcolor="#0d1117" style="padding: 24px; border: 1px solid #30363d; border-radius: 12px;">
-      <h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">⚡ Reference Circuit & Power Distribution</h3>
-      <p align="center" style="color: #8b949e; font-size: 14px; margin-bottom: 20px;">
-        Interactive wiring mapping for the STM32 Nucleo-F401RE edge controller and ESP32/NodeMCU IoT bridging node.
-      </p>
+    <td bgcolor="#0d1117" style="padding: 20px; border: 1px solid #30363d; border-radius: 12px;">
+      <h3 align="center" style="color: #58a6ff; margin-top: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"> Circuit Schematic & Power Distribution</h3>
       <p align="center">
-        <a href="docs/schematics/circuit_diagram.jpg" target="_blank">
+        <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
           <img src="docs/schematics/circuit_diagram.jpg" alt="AbangAir Circuit Diagram" width="85%" style="border-radius: 8px; border: 1px solid #30363d; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
         </a>
-      </p>
-      <p align="center" style="color: #8b949e; font-size: 12px; margin-bottom: 0;">
-        <i>💡 Click diagram to open high-resolution reference sheet.</i>
       </p>
     </td>
   </tr>
