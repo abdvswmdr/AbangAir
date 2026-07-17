@@ -3,7 +3,7 @@
 <p align="center">
   <img alt="STM32" src="https://img.shields.io/badge/Nucleo-F401RE-03234B?logo=stmicroelectronics&logoColor=white">
   <img alt="ESP32" src="https://img.shields.io/badge/ESP32-DevKit-E7352C?logo=espressif&logoColor=white">
-  <img alt="Mbed OS" src="https://img.shields.io/badge/ARM-Mbed_2-0091BD?logo=arm&logoColor=white">
+  <img alt="Mbed OS" src="https://img.shields.io/badge/Mbed-2-0091BD?logo=arm&logoColor=white">
   <img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino-00878F?logo=arduino&logoColor=white">
   <img alt="Blynk IoT" src="https://img.shields.io/badge/IoT-Blynk-00A4E4?logo=blynk&logoColor=white">
 </p>
@@ -35,7 +35,7 @@ An embedded water-tank monitoring and control prototype developed using an **STM
 Developed as a comprehensive hardware-software portfolio project for **EFB 2073/EEB 2083 – Microprocessors & Computer Architecture** at **Universiti Teknologi PETRONAS** (January 2026 Semester).
 
 > [!WARNING]
-> **Hardware Caution:** The HC-SR04 operates at 5V. The ECHO pin *must* be connected to the STM32 through a 5V-to-3.3V voltage divider (e.g., 1kΩ + 2kΩ) to prevent damaging the STM32 GPIO pins.
+> **Hardware:** The HC-SR04 operates at 5V. The ECHO pin *must* be connected to the STM32 through a 5V-to-3.3V voltage divider (e.g., 1kΩ + 2kΩ) to prevent damaging the STM32 GPIO pins.
 
 ---
 
@@ -49,24 +49,6 @@ Option 1: Bulletproof HTML Table.
 Standard Markdown parsers often choke on raw HTML <img> tags inside native Markdown tables. 
 Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local IDEs.
 -->
-<table width="100%">
-  <tr>
-    <td align="center" valign="top" width="33%">
-      <b>Local OLED Interface</b><br><br>
-      <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="100%" style="border-radius:6px;">
-    </td>
-    <td align="center" valign="top" width="33%">
-      <b>Submersible Pump</b><br><br>
-      <img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="100%" style="border-radius:6px;">
-    </td>
-    <td align="center" valign="top" width="33%">
-      <b>Control Circuitry</b><br><br>
-      <img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="100%" style="border-radius:6px;">
-    </td>
-  </tr>
-</table>
-
-
 <p align="center">
   <img src="docs/hardware_photos/6235768536831824310_121.jpg" alt="Full Hardware Assembly" width="600px" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
@@ -88,6 +70,7 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   </tr>
 </table>
 
+---
 
 ## Features
 
@@ -103,6 +86,49 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
 - A V2 command that can force the pump relay ON through the implemented override logic
 
 ## System Architecture
+
+
+
+```mermaid
+graph LR
+    subgraph STM32 ["🧠 STM32 Nucleo-F401RE (Edge Controller)"]
+        A["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/pulse.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/pulse.svg)' width='20' height='20' /> HC-SR04 Sensor"] -->|5-sample avg| B["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/symbol-variable.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/symbol-variable.svg)' width='20' height='20' /> Level Calculation"]
+        B --> C["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/screen-normal.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/screen-normal.svg)' width='20' height='20' /> SSD1306 OLED"]
+        B --> D["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/zap.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/zap.svg)' width='20' height='20' /> Relay / Pump Control"]
+        B --> E["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/bell-dot.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/bell-dot.svg)' width='20' height='20' /> Piezo Buzzer"]
+    end
+	
+    subgraph ESP32 ["📡 ESP32 DevKit (IoT Bridge)"]
+        F["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/terminal.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/terminal.svg)' width='20' height='20' /> UART Parser"] --> G["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/cloud.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/cloud.svg)' width='20' height='20' /> Blynk Cloud API"]
+    end
+
+    subgraph Cloud ["☁️ Blynk Cloud / Mobile App"]
+        H["<img src='[https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/dashboard.svg](https://raw.githubusercontent.com/visualpharm/codicons/master/src/icons/dashboard.svg)' width='20' height='20' /> App Dashboard"]
+    end
+
+    STM32 -- "UART (9600)<br/>L:level, D:dist, P:state" --> ESP32
+    ESP32 -- "V2 Override<br/>(OVERRIDE:0/1)" --> STM32
+    ESP32 <-->|Wi-Fi| Cloud
+    D --> I["⚡ 12V DC Pump"]
+
+    %% Visual styling configurations to decrease vertical height and footprint
+    classDef stm32 fill:#03234B,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef esp32 fill:#E7352C,stroke:#fff,stroke-width:1px,color:#fff;
+    classDef cloud fill:#00A4E4,stroke:#fff,stroke-width:1px,color:#fff;
+    class STM32 stm32;
+    class ESP32 esp32;
+    class Cloud cloud;
+    
+    style A fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style B fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style C fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style D fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style E fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style F fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style G fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style H fill:#1e1e2e,stroke:#313244,color:#cdd6f4
+    style I fill:#313244,stroke:#f38ba8,color:#f38ba8
+```
 
 ```mermaid
 graph TD
@@ -136,7 +162,7 @@ graph TD
 
 ## Hardware
 
-| Component | Model / role |
+| Component | Model |
 |---|---|
 | Main controller | STM32 Nucleo-F401RE |
 | IoT bridge | ESP32 DevKit with CP2102 USB interface |
