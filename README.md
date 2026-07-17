@@ -145,6 +145,8 @@ graph LR
 
 </details>
 
+<br>
+
 <table width="100%" style="border-collapse: collapse; border: none;">
   <tr>
     <!-- Left Column: STM32 Pinout Table -->
@@ -207,24 +209,23 @@ graph LR
         </tbody>
       </table>
     </td>
+
+<!-- Right Column: Circuit Schematic Card -->
+<td width="50%" style="padding: 10px; vertical-align: top; border: none;">
+  <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); text-align: center; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
+    <strong style="color: #58a6ff; font-size: 14px; display: block; margin-bottom: 12px;">⚡ Hardware Interfacing Schematic</strong>
+    <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
+      <img src="docs/diagrams/Circuit_Diagram.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer; max-height: 320px; object-fit: contain; background: #161b22;">
+    </a>
+    <p style="color: #8b949e; font-size: 11px; margin: 12px 0 0 0; line-height: 1.4; text-align: left;">
+      Wiring schematic showcasing common ground architecture, dual power rails (12V High-Power Loop & stepped-down 5V Logic Bus), safety level divider, and serial cross-wiring.
+    </p>
+    <p style="color: #58a6ff; font-size: 11px; margin: 8px 0 0 0; text-align: center;">
+      <i>💡 Click diagram to open zoom-friendly view.</i>
+    </p>
+  </div>
+</td>
     
-    <!-- Right Column: Circuit Schematic Card -->
-    <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
-      <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); text-align: center;">
-        <strong style="color: #58a6ff; font-size: 14px; display: block; margin-bottom: 12px;">⚡ Hardware Interfacing Schematic</strong>
-        <a href="docs/diagrams/Circuit_Diagram.jpg" target="_blank">
-          <img src="docs/diagrams/Circuit_Diagram.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer;">
-        </a>
-        <p style="color: #8b949e; font-size: 11px; margin: 12px 0 0 0; line-height: 1.4; text-align: left;">
-          Wiring schematic showcasing common ground architecture, dual power rails (12V High-Power Loop & stepped-down 5V Logic Bus), safety level divider, and serial cross-wiring.
-        </p>
-        <p style="color: #58a6ff; font-size: 11px; margin: 8px 0 0 0; text-align: center;">
-          <i>💡 Click diagram to open zoom-friendly view.</i>
-        </p>
-      </div>
-    </td>
-  </tr>
-</table>
 
 ---
 
