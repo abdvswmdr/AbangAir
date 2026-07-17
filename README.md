@@ -212,7 +212,7 @@ graph LR
 
 <!-- Right Column: Circuit Schematic Card -->
 <td width="50%" style="padding: 10px; vertical-align: top; border: none;">
-<img src="docs/diagrams/Circuit_Diagram.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer; max-height: 320px; object-fit: contain; background: #161b22;">
+<img src="docs/diagrams/Circuit.jpg" alt="AbangAir Circuit Diagram" width="100%" style="border-radius: 6px; border: 1px solid #21262d; cursor: pointer; max-height: 320px; object-fit: contain; background: #161b22;">
 </td>
 </tr>
 </table>
