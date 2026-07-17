@@ -100,7 +100,7 @@ in a new browser tab ("pop") for close-up technical inspection.
 ## Technical Details 
 
 <details open>
-<summary><strong>🗺️ System Architecture Diagram</strong></summary>
+<summary><strong> System Architecture Diagram </strong></summary>
 
 ```mermaid
 graph LR
@@ -160,7 +160,8 @@ graph LR
   </tr>
 </table>
 
-## Bill of Materials (BOM)
+<details>
+<summary><strong> Bill of Materials (BOM) </strong></summary>
 
 | Component | Model |
 |---|---|
@@ -174,6 +175,8 @@ graph LR
 | Main load supply | Three 18650 cells in series, approximately 11.1 V nominal and 12.6 V fully charged |
 
 See [`docs/CONNECTIONS.md`](docs/CONNECTIONS.md) for the full wiring table and electrical cautions.
+
+</details>
 
 <details>
 <summary><strong> Pinout: STM32 Nucleo-F401RE </strong></summary>
