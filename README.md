@@ -1,7 +1,7 @@
 # AbangAir 💧
 
 <p align="center">
-  <img alt="STM32" src="https://img.shields.io/badge/STM32-Nucleo--F401RE-03234B?logo=stmicroelectronics&logoColor=white">
+  <img alt="STM32" src="https://img.shields.io/badge/Nucleo--F401RE-03234B?logo=stmicroelectronics&logoColor=white">
   <img alt="ESP32" src="https://img.shields.io/badge/ESP32-DevKit-E7352C?logo=espressif&logoColor=white">
   <img alt="Mbed OS" src="https://img.shields.io/badge/Framework-ARM_Mbed_2-0091BD?logo=arm&logoColor=white">
   <img alt="Arduino" src="https://img.shields.io/badge/IDE-Arduino_IDE-00878F?logo=arduino&logoColor=white">
@@ -132,25 +132,6 @@ graph TD
     class STM32 stm32;
     class ESP32 esp32;
     class Cloud cloud;
-```
-
-```text
-                         UART, 9600 baud
-┌──────────────────────┐  L:<level>,D:<distance>,P:<state>  ┌───────────────────┐
-│ STM32 Nucleo-F401RE  │ ──────────────────────────────────> │ ESP32 DevKit      │
-│                      │ <────────────────────────────────── │ Blynk V2 command  │
-│ HC-SR04 measurement  │                                    │ Wi-Fi + Blynk     │
-│ Level calculation    │                                    └─────────┬─────────┘
-│ OLED display         │                                              │
-│ Relay/pump control   │                                              ▼
-│ Buzzer alerts        │                                        Blynk Cloud/App
-└──────────┬───────────┘
-           │
-           ▼
-      Relay module
-           │
-           ▼
-       12 V pump
 ```
 
 ## Hardware
