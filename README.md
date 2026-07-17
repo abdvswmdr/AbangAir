@@ -47,13 +47,6 @@ Using a pure HTML <table> solves rendering issues on GitHub, GitLab, and local I
   </tr>
 </table>
 
----
-| Local OLED Interface | Submersible Pump | Control Circuitry |
-| :---: | :---: | :---: |
-| <img src="docs/hardware_photos/6248794734553927220_121.jpg" alt="OLED UI Display" width="220px"> | <img src="docs/hardware_photos/6248794734553927232_121.jpg" alt="Submersible Pump" width="220px"> | <img src="docs/hardware_photos/6248794734553927236_121.jpg" alt="STM32 and ESP32" width="220px"> |
-
----
-
 ## 📋 Contents
 
 * [Project Overview](#project-overview)
